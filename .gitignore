@@ -32,8 +32,24 @@ yarn-error.*
 
 # local env files
 .env*.local
+.env
 
 # typescript
 *.tsbuildinfo
 
+# logs
+logs
+*.log
+
+# testing
+coverage
+
+# IDE
+.idea
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# misc
 app-example
+.DS_Store

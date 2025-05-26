@@ -3,24 +3,25 @@
  * There are many other ways to style your app. For example, [Nativewind](https://www.nativewind.dev/), [Tamagui](https://tamagui.dev/), [unistyles](https://reactnativeunistyles.vercel.app), etc.
  */
 
-const tintColorLight = '#0a7ea4';
-const tintColorDark = '#fff';
+// Using zinc palette
+const tintColorLight = '#71717a'; // zinc-500
+const tintColorDark = '#d4d4d8'; // zinc-300
 
 export const Colors = {
   light: {
-    text: '#11181C',
-    background: '#fff',
+    text: '#27272a', // zinc-800
+    background: '#fafafa', // zinc-50
     tint: tintColorLight,
-    icon: '#687076',
-    tabIconDefault: '#687076',
-    tabIconSelected: tintColorLight,
+    icon: '#52525b', // zinc-600
+    tabIconDefault: '#71717a', // zinc-500
+    tabIconSelected: '#18181b', // zinc-900
   },
   dark: {
-    text: '#ECEDEE',
-    background: '#151718',
+    text: '#e4e4e7', // zinc-200
+    background: '#18181b', // zinc-900
     tint: tintColorDark,
-    icon: '#9BA1A6',
-    tabIconDefault: '#9BA1A6',
-    tabIconSelected: tintColorDark,
+    icon: '#a1a1aa', // zinc-400
+    tabIconDefault: '#a1a1aa', // zinc-400
+    tabIconSelected: '#ffffff', // white
   },
 };

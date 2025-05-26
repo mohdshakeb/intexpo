@@ -33,6 +33,15 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
+      ],
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/Satoshi-Font/Satoshi-Variable.ttf",
+            "./assets/fonts/Satoshi-Font/Satoshi-VariableItalic.ttf"
+          ]
+        }
       ]
     ],
     "experiments": {
