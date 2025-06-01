@@ -31,7 +31,7 @@ const ANIMATION_CONFIG = {
   },
   // Easing functions
   easing: {
-    default: Easing.bezier(0.42, 0.09, 0.21, 1.18),  // Standard easing
+    default: Easing.bezier(0.35, -0.09, 0.69, 1.28),  // Standard easing
     backgroundFade: Easing.out(Easing.quad),      // Smooth fade out for background
   },
   // Animation values
@@ -219,7 +219,7 @@ export default function CircularSliderScreen() {
             paddingHorizontal: (SCREEN_WIDTH - ITEM_SIZE) / 2, // Center first and last items
           }}
           snapToInterval={ITEM_WIDTH}
-          decelerationRate="fast"
+          decelerationRate={0.95}
           onScroll={scrollHandler}
           scrollEventThrottle={16}
           renderItem={({ item, index }) => (

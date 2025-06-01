@@ -34,20 +34,26 @@ type CarouselItem = {
 const CAROUSEL_DATA: CarouselItem[] = [
   { 
     id: '1', 
-    title: 'Fade In/Out Animation',
+    title: 'Animated Card',
     image: require('../assets/images/carousel/image1.jpeg'),
-    route: '/animations/fade-in-out',
+    route: '/animations/animated-card',
   },
   { 
     id: '2', 
-    title: 'Image Carousel',
-    image: require('../assets/images/carousel/image2.jpeg'),
-    route: '/animations/circular-slider',
+    title: 'Fade In/Out Animation',
+    image: require('../assets/images/carousel/image7.jpeg'),
+    route: '/animations/fade-in-out',
   },
   { 
     id: '3', 
+    title: 'Image Carousel',
+    image: require('../assets/images/carousel/image5.jpeg'),
+    route: '/animations/circular-slider',
+  },
+  { 
+    id: '4', 
     title: 'Counter Animation',
-    image: require('../assets/images/carousel/image3.jpeg'),
+    image: require('../assets/images/carousel/image6.jpeg'),
     route: '/animations/counter',
   },
 ];

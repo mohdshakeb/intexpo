@@ -19,7 +19,7 @@ export default function HomeScreen() {
   return (
     <ThemedView className="flex-1 pt-8">
       <ScrollView className="pb-6">
-        <View className="flex-row justify-between items-start mt-6 mb-20 pl-4 pr-4">
+        <View className="flex-row justify-between items-start mt-6 mb-10 pl-4 pr-4">
           <View className="flex-1">
             <ThemedText className="font-regular text-sm uppercase tracking-wider mb-1 text-zinc-500">
               REANIMATED

@@ -1,8 +1,8 @@
 import { useColorScheme } from '@/hooks/useColorScheme';
 import { Stack } from 'expo-router';
-import { Minus, Plus, Settings } from 'lucide-react-native';
+import { Minus, Plus } from 'lucide-react-native';
 import React, { useEffect, useRef, useState } from 'react';
-import { Text, TouchableOpacity, View } from 'react-native';
+import { TouchableOpacity, View } from 'react-native';
 import Animated, {
   cancelAnimation,
   Easing,
@@ -327,7 +327,6 @@ export default function CounterScreen() {
   const [displayCount, setDisplayCount] = useState(0);
   const [animationSpeed, setAnimationSpeed] = useState(1); // Default animation speed
   const [animationId, setAnimationId] = useState(0); // Unique ID for each animation
-  const [showSettings, setShowSettings] = useState(false); // Toggle for settings panel
   const [animationPreset, setAnimationPreset] = useState('default'); // Current animation preset
   
   // Animation queue for handling rapid button presses
@@ -684,45 +683,6 @@ export default function CounterScreen() {
           <Plus size={24} color={useColorScheme() === 'dark' ? '#000' : '#fff'} />
         </TouchableOpacity>
       </View>
-      
-      {/* Settings toggle button */}
-      <TouchableOpacity 
-        className="absolute top-4 right-4 bg-zinc-200 dark:bg-zinc-800 p-2 rounded-full"
-        onPress={() => setShowSettings(!showSettings)}
-      >
-        <Settings size={18} className="text-zinc-800 dark:text-zinc-200" />
-      </TouchableOpacity>
-      
-      {/* Settings panel */}
-      {showSettings && (
-        <View className="absolute bottom-0 left-0 right-0 bg-white dark:bg-zinc-800 p-4 rounded-t-xl shadow-lg">
-          <Text className="text-zinc-800 dark:text-zinc-200 font-bold mb-3">Animation Presets</Text>
-          
-          <View className="flex-row flex-wrap gap-2">
-            {['default', 'bounce', 'elastic', 'slow', 'fast'].map((preset) => (
-              <TouchableOpacity
-                key={preset}
-                className={`px-3 py-2 rounded-full ${
-                  animationPreset === preset 
-                    ? 'bg-blue-500' 
-                    : 'bg-zinc-200 dark:bg-zinc-700'
-                }`}
-                onPress={() => setAnimationPreset(preset)}
-              >
-                <Text 
-                  className={`${
-                    animationPreset === preset 
-                      ? 'text-white' 
-                      : 'text-zinc-800 dark:text-zinc-200'
-                  } font-medium capitalize`}
-                >
-                  {preset}
-                </Text>
-              </TouchableOpacity>
-            ))}
-          </View>
-        </View>
-      )}
     </View>
   );
 } 
